@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Food Order</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Online Food Order</h1>
+    </header>
+    <main>
+        <section id="menu">
+            <h2>Menu</h2>
+            <div class="food-item">
+                <p>Burger - ₹300</p>
+                <div>
+                    <button onclick="addToOrder('Burger', 300)">Add to Order</button>
+                    <button onclick="addToWishlist('Burger')">Add to Wishlist</button>
+                </div>
+            </div>
+            <div class="food-item">
+                <p>Rasgulla - ₹340</p>
+                <div>
+                    <button onclick="addToOrder('Rasgulla', 340)">Add to Order</button>
+                    <button onclick="addToWishlist('Rasgulla')">Add to Wishlist</button>
+                </div>
+            </div>
+            <div class="food-item">
+                <p>Daal Chawal - ₹100</p>
+                <div>
+                    <button onclick="addToOrder('Daal Chawal', 100)">Add to Order</button>
+                    <button onclick="addToWishlist('Daal Chawal')">Add to Wishlist</button>
+                </div>
+            </div>
+            <div class="food-item">
+                <p>Dosa - ₹50</p>
+                <div>
+                    <button onclick="addToOrder('Dosa', 50)">Add to Order</button>
+                    <button onclick="addToWishlist('Dosa')">Add to Wishlist</button>
+                </div>
+            </div>
+            <div class="food-item">
+                <p>Pizza - ₹500</p>
+                <div>
+                    <button onclick="addToOrder('Pizza', 500)">Add to Order</button>
+                    <button onclick="addToWishlist('Pizza')">Add to Wishlist</button>
+                </div>
+            </div>
+            <div class="food-item">
+                <p>Pasta - ₹400</p>
+                <div>
+                    <button onclick="addToOrder('Pasta', 400)">Add to Order</button>
+                    <button onclick="addToWishlist('Pasta')">Add to Wishlist</button>
+                </div>
+            </div>
+            <div class="food-item">
+                <p>Sushi - ₹900</p>
+                <div>
+                    <button onclick="addToOrder('Sushi', 900)">Add to Order</button>
+                    <button onclick="addToWishlist('Sushi')">Add to Wishlist</button>
+                </div>
+            </div>
+            <div class="food-item">
+                <p>Salad - ₹350</p>
+                <div>
+                    <button onclick="addToOrder('Salad', 350)">Add to Order</button>
+                    <button onclick="addToWishlist('Salad')">Add to Wishlist</button>
+                </div>
+            </div>
+            <div class="food-item">
+                <p>Sandwich - ₹250</p>
+                <div>
+                    <button onclick="addToOrder('Sandwich', 250)">Add to Order</button>
+                    <button onclick="addToWishlist('Sandwich')">Add to Wishlist</button>
+                </div>
+            </div>
+            <div class="food-item">
+                <p>Fries - ₹150</p>
+                <div>
+                    <button onclick="addToOrder('Fries', 150)">Add to Order</button>
+                    <button onclick="addToWishlist('Fries')">Add to Wishlist</button>
+                </div>
+            </div>
+            <div class="food-item">
+                <p>Ice Cream - ₹200</p>
+                <div>
+                    <button onclick="addToOrder('Ice Cream', 200)">Add to Order</button>
+                    <button onclick="addToWishlist('Ice Cream')">Add to Wishlist</button>
+                </div>
+            </div>
+            <div class="food-item">
+                <p>Chocolate Cake - ₹400</p>
+                <div>
+                    <button onclick="addToOrder('Chocolate Cake', 400)">Add to Order</button>
+                    <button onclick="addToWishlist('Chocolate Cake')">Add to Wishlist</button>
+                </div>
+            </div>
+            <div class="food-item">
+                <p>Fruit Tart - ₹350</p>
+                <div>
+                    <button onclick="addToOrder('Fruit Tart', 350)">Add to Order</button>
+                    <button onclick="addToWishlist('Fruit Tart')">Add to Wishlist</button>
+                </div>
+            </div>
+        </section>
+        <section id="order-summary">
+            <h2>Order Summary</h2>
+            <ul id="order-list"></ul>
+            <p>Total: ₹<span id="total-price">0</span></p>
+            <button onclick="previewOrder()">Preview Order</button>
+        </section>
+        <section id="address">
+            <h2>Delivery Address</h2>
+            <textarea id="address-text" placeholder="Enter your delivery address here..."></textarea>
+        </section>
+        <section id="order-preview" style="display:none;">
+            <h2>Order Preview</h2>
+            <ul id="preview-list"></ul>
+            <p>Total: ₹<span id="preview-total-price">0</span></p>
+            <p>Delivery Address: <span id="preview-address"></span></p>
+            <button onclick="placeOrder()">Place Order</button>
+        </section>
+        <section id="wishlist">
+            <h2>Wishlist</h2>
+            <ul id="wishlist-list"></ul>
+        </section>
+        <section id="feedback">
+            <h2>User Feedback</h2>
+            <textarea id="feedback-text" placeholder="Enter your feedback here..."></textarea>
+            <button onclick="submitFeedback()">Submit Feedback</button>
+            <ul id="feedback-list"></ul>
+        </section>
+    </main>
+    <script src="scripts.js"></script>
+</body>
+</html>
